@@ -16,6 +16,11 @@ body {
 body a {
   text-decoration: none;
 }
+@media (max-width: 375px) {
+  body {
+    background-image: url("../images/bg-intro-mobile.png");
+  }
+}
 
 .section {
   flex: 1;
@@ -26,7 +31,8 @@ body a {
   align-items: center;
   padding: 3rem 0;
 }
-.section .container {
+
+.container {
   width: 90%;
   max-width: 1100px;
   display: flex;
@@ -35,21 +41,21 @@ body a {
   gap: 5rem;
   color: #fff;
 }
-.section .container-left {
+.container-left {
   flex: 1;
 }
-.section .container-left h1 {
+.container-left h1 {
   font-size: 3rem;
   line-height: 3rem;
   margin-bottom: 2.5rem;
 }
-.section .container-left p {
+.container-left p {
   font-weight: 500;
 }
-.section .container-right {
+.container-right {
   flex: 1;
 }
-.section .container-right .try {
+.container-right .try {
   width: 100%;
   text-align: center;
   padding: 1rem 2rem;
@@ -58,7 +64,7 @@ body a {
   box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
 }
-.section .container-right form {
+.container-right form {
   background-color: #fff;
   border-radius: 10px;
   padding: 2rem;
@@ -67,45 +73,48 @@ body a {
   flex-direction: column;
   box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.1);
 }
-.section .container-right form .input-container {
+.container-right form .input-container {
   position: relative;
   margin-bottom: 1rem;
 }
-.section .container-right form .input-container input {
+.container-right form .input-container input {
   width: 100%;
   padding: 1rem;
   border: 1px solid hsl(246, 25%, 77%);
   border-radius: 5px;
 }
-.section .container-right form .input-container input::-moz-placeholder {
+.container-right form .input-container input::-moz-placeholder {
   color: hsl(246, 25%, 77%);
   font-weight: 600;
 }
-.section .container-right form .input-container input::placeholder {
+.container-right form .input-container input::placeholder {
   color: hsl(246, 25%, 77%);
   font-weight: 600;
 }
-.section .container-right form .input-container input:focus {
+.container-right form .input-container input:focus {
   outline: 1px solid hsl(248, 32%, 49%);
 }
-.section .container-right form .input-container input.error {
+.container-right form .input-container input.error {
   border: 1px solid hsl(0, 100%, 74%);
   color: hsl(0, 100%, 74%);
 }
-.section .container-right form .input-container img {
+.container-right form .input-container .error-icon {
   position: absolute;
-  top: 27%;
+  top: 20%;
   right: 10px;
   display: none;
 }
-.section .container-right form .input-container .error-msg {
+.container-right form .input-container .error-icon.show {
+  display: block;
+}
+.container-right form .input-container .error-msg {
   color: hsl(0, 100%, 74%);
   font-weight: 600;
   font-size: 0.6rem;
   text-align: right;
   margin-top: 0.3rem;
 }
-.section .container-right form button {
+.container-right form button {
   padding: 1rem;
   text-align: center;
   text-transform: uppercase;
@@ -119,10 +128,10 @@ body a {
   transition: 0.3s;
   cursor: pointer;
 }
-.section .container-right form button:hover {
+.container-right form button:hover {
   opacity: 0.8;
 }
-.section .container-right .agreement {
+.container-right .agreement {
   width: 85%;
   color: hsl(246, 25%, 77%);
   font-size: 0.6rem;
@@ -130,17 +139,17 @@ body a {
   text-align: center;
   margin: 0 auto;
 }
-.section .container-right .agreement a {
+.container-right .agreement a {
   color: hsl(0, 100%, 74%);
   font-weight: 700;
   cursor: pointer;
 }
 @media (max-width: 750px) {
-  .section .container {
+  .container {
     flex-direction: column;
     justify-content: center;
   }
-  .section .container-left {
+  .container-left {
     text-align: center;
   }
 }
